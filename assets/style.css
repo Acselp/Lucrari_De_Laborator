@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#nav_bar > div, #nav_bar {
+    width: 100%;
+    height: 70px;
+    background-color: #F07427;
+    display: flex;
+    align-items: center;
+}
+
+#nav_bar > div > div > a {
+    text-decoration: none;
+}
+
+#logo {
+    font-family: "kaushan script", "cursive";
+    color: blanchedalmond;
+    font-size: 32pt;
+    text-decoration: none;
+    margin-left: 30px;
+    margin-right: 20%;
+}
+
+.nav_items {
+    position: relative;
+    top: 2px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 14pt;
+    color: blanchedalmond;
+    font-family: "Lato";
+    font-weight: 700;
+}
+
+.btns {
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: sienna;
+    transition: 0.075s;
+}
+
+.btns:hover {
+    background-color: #C05D1F;
+}
+
+.btn1 {
+    width: 89px;
+    height: 30px;
+}
+
+.btn2 {
+    width: 110px;
+    height: 30px;
+}
+
+.btn3 {
+    width: 122px;
+    height: 30px;
+}
+
+.btn4 {
+    width: 120px;
+    height: 30px;
+}
