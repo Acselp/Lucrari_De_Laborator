@@ -6,10 +6,24 @@
     padding: 0;
 }
 
+body {
+    mask-type: luminance;
+    display: block;
+}
+
+#main_section {
+    background: url('../img/bg.jpg');
+    height: 100vh;
+    filter: brightness(60%);
+}
+
+/*--------------------------Nav bar--------------------------------*/
+
 #nav_bar > div, #nav_bar {
     width: 100%;
     height: 70px;
     background-color: #F07427;
+    opacity: 0.85;
     display: flex;
     align-items: center;
 }
@@ -18,56 +32,65 @@
     text-decoration: none;
 }
 
+#nav_bar {
+    z-index: 1;
+    position: fixed;
+}
+
 #logo {
     font-family: "kaushan script", "cursive";
     color: blanchedalmond;
     font-size: 32pt;
     text-decoration: none;
     margin-left: 30px;
-    margin-right: 20%;
+    margin-right: 50%;
 }
 
-.nav_items {
+.nav_items, .nav_items:hover {
     position: relative;
-    top: 2px;
+    top: -2px;
     margin-left: 20px;
     margin-right: 20px;
     font-size: 14pt;
     color: blanchedalmond;
     font-family: "Lato";
     font-weight: 700;
+    align-self: center;
+    text-decoration: none;
 }
 
 .btns {
-    margin-left: 20px;
-    margin-right: 20px;
-    border-radius: 5px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: sienna;
     transition: 0.075s;
+    height: 70px;
+    display: flex;
+    
 }
 
 .btns:hover {
     background-color: #C05D1F;
+    cursor: pointer;
 }
 
 .btn1 {
     width: 89px;
-    height: 30px;
 }
 
 .btn2 {
     width: 110px;
-    height: 30px;
 }
 
 .btn3 {
     width: 122px;
-    height: 30px;
 }
 
 .btn4 {
     width: 120px;
-    height: 30px;
 }
+
+.active {
+    background-color: #C05D1F;
+}
+
+/*--------------------------Nav bar--------------------------------*/
+
+/*-------------------------Main section------------------------------*/

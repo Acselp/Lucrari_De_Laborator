@@ -1,7 +1,5 @@
-$(document).ready(() => {
-    let homePg = false
-    let summaryPg = false
-    let originalPg = false
-    let characters = false
-
+$(() => {
+   $(".btn1").on((click) => {
+      window.location.href= 'https://www.w3schools.com/howto/howto_js_active_element.asp';
+   })
 })
