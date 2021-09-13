@@ -22,7 +22,9 @@
         ?>
 
         <section id="main_section">
+            <div class="container">
 
+            </div>
         </section>
 
     </body>
