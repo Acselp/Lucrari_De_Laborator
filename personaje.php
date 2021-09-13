@@ -21,5 +21,9 @@
             include('nav.php');
         ?>
 
+        <section id="main_section">
+
+        </section>
+
     </body>
 </html>

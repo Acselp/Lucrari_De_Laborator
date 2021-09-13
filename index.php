@@ -29,7 +29,7 @@
         <h3 id="author">
           de Ion Creangă
         </h3>
-        <a href="//C:/Users/Virgiliu/Desktop/BD/Laboratoare/Site/original.html">Citește povestea</a>
+        <a href="./original.php">Citește povestea</a>
       </div>
     </section>
 
