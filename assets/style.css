@@ -48,37 +48,37 @@ body {
     margin-right: 20px;
     font-size: 14pt;
     color: blanchedalmond;
-    font-family: "Lato";
+    font-family: "Lato", sans-serif;
     font-weight: 700;
     align-self: center;
     text-decoration: none;
 }
 
-.btns {
+.btns > a {
     transition: 0.075s;
     height: 70px;
     display: flex;
     
 }
 
-.btns:hover {
+.btns:hover > a {
     background-color: #C05D1F;
     cursor: pointer;
 }
 
-.btn1 {
+.btn1 > a {
     width: 89px;
 }
 
-.btn2 {
+.btn2 > a {
     width: 110px;
 }
 
-.btn3 {
+.btn3 > a {
     width: 122px;
 }
 
-.btn4 {
+.btn4 > a {
     width: 120px;
 }
 
