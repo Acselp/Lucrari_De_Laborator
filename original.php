@@ -21,7 +21,7 @@
     include('nav.php');
     ?>
 
-    <section id="main_sect_original">
+    <section class="main_section heigth-5000px">
         <div class="container">
             <div id="content">
                 <div id="header">

@@ -1,4 +1,4 @@
-<div id="story-text">
+<div class="indent-30px">
     <p>A fost odată, când a fost, că, dacă n-ar fi fost, nu s-ar povesti.
         Noi nu suntem de pe când poveștile, ci suntem mai dincoace cu vro două-trei zile, de pe când se potcovea purecele cu nouăzeci și nouă de ocă de fer la un picior și tot i se părea că-i ușor.
     <p>Cică era odată un om însurat, și omul acela trăia la un loc cu soacră-sa. Nevasta lui, care avea copil de țâță, era cam proastă; dar și soacră-sa nu era tocmai hâtră.
