@@ -32,7 +32,7 @@
     </p>
 
     <p>Și mergând el bezmetic, fără să știe unde se duce, după o bucată de vreme, oprindu-se într-un loc, i se întâmplă iar să vadă ceva ce nu mai văzuse: un om ținea puțin un oboroc deșert cu gura spre soare, apoi răpede-l înșfăca și intra cu dânsul într-un bordeiu; pe urmă iar ieșea, îl punea iar cu gura la soare, și tot așa făcea... Drumețul nostru, nedumerit, zise:
-
+        <img src="./img/galeatacusoare.png" alt="Galeata cu soare" class="img_mrgn_l0 float_left">
         <br>&emsp; — Bună ziua, om bun!
 
         <br>&emsp; — Mulțămesc dumitale, prietene!
@@ -54,9 +54,10 @@
         "Încă un tont", zise drumețul în sine și plecă.
     </p>
 
+
     <p>Și mergând el tot înainte, peste câtva timp ajunse într-un sat și, din întâmplare, se opri la casa unui om. Omul de gazdă, fiind rotar, își lucrase un car și-l înjghebase, în casă, în toată întregimea lui; ș-acum, voind să-l scoată afară, trăgea de proțap cu toată puterea, dar carul nu ieșea. Știți pentru ce? Așa: ușile era mai strâmte decât carul. Rotarul voia acum să taie ușorii, spre a scoate carul. Noroc însă că drumețul l-a învățat să-l desfacă în toate părțile lui, să le scoată pe rând afară ș-apoi iarăși să-l înjghebe la loc.
         <br>&emsp; — Foarte mulțămesc, om bun, zise gazda; bine m-ai învățat! Ia uită-te dumneta! Era să dărâm bunătate de casă din pricina carului...
-
+        <img src="./img/nucifurca.png" alt="Nucile" class="float_right img_mrgn_r0">
         De aici, drumețul nostru, mai numărând un nătărău, merse tot înainte, până ce ajunse iară la o casă. Acolo, ce să vadă! Un om, cu-n țăpoiu în mână, voia să arunce niște nuci din tindă în pod.
 
         "Din ce în ce dau peste dobitoci", zise drumețul în sine.
@@ -93,7 +94,10 @@
         Atunci omul ascultă și vaca scăpă cu viață.
 
         <br>&emsp; — Bine m-ai învățat, om bun! Pentr-un lucru de nimica eram cât pe ce să-mi gâtui vaca!
+    </p>
 
+    <p>
+        <img src="./img/acasa.png" alt="Acasa" class="img_mrgn_l0 float_left" width="300px">
         Așa, drumețul nostru, mirându-se și de această mare prostie, zise în sine: "Mâța tot s-ar fi putut întâmpla să deie drobul de sare jos de pe horn; dar să cari soarele în casă cu oborocul, să arunci nucile în pod cu țăpoiul și să tragi vaca pe șură, la fân, n-am mai gândit!"
 
         Apoi drumețul se întoarse acasă și petrecu lângă ai săi, pe cari-i socoti mai cu duh decât pe cei ce văzuse în călătoria sa.

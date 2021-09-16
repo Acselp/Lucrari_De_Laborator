@@ -20,7 +20,7 @@
     include('nav.php');
     ?>
 
-    <section class="main_section heigth-1000px">
+    <section class="main_section">
         <div class="container">
             <div id="content">
                 <div id="header">

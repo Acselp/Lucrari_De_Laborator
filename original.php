@@ -21,7 +21,7 @@
     include('nav.php');
     ?>
 
-    <section class="main_section heigth-5000px">
+    <section class="main_section">
         <div class="container">
             <div id="content">
                 <div id="header">
@@ -36,7 +36,7 @@
                 <br>
                 <br>
                 <br>
-                <img id="main_img" src="./img/homeImg.jpg" alt="Prostia omeneasca" align="right">
+                <img id="main_img" class="float_right img_mrgn_r0" src="./img/homeImg.jpg" alt="Prostia omeneasca">
 
                 <div id="tale">
                     <span>
@@ -45,6 +45,13 @@
                         ?>
                     </span>
                 </div>
+
+                <br>
+                <br>
+                <br>
+
+                <h4>Sursa: </h4>
+                <a href="https://ro.wikisource.org/wiki/Prostia_omenească">https://ro.wikisource.org/wiki/Prostia_omenească</a>
             </div>
         </div>
     </section>
