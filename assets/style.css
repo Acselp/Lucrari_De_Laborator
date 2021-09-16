@@ -78,6 +78,7 @@ body {
     text-decoration: none;
     color: blanchedalmond;
     font-family: "Lato", sans-serif;
+    font-weight: bolder;
     align-content: center;
 }
 
@@ -92,7 +93,7 @@ body {
 
 /*--------------------------Nav bar--------------------------------*/
 
-/*-------------------------Main section home page------------------------------*/
+/*-------------------------Main section <<home page>>------------------------------*/
 
 #header_div {
     align-self: center;
@@ -125,3 +126,52 @@ body {
     opacity: 0.8;
     border-color: #AF5B27;
 }
+
+/*---------------------------------------------------------------*/
+
+/*---------------------------<<Original page>>-------------------------------*/
+.container {
+    width: 960px;
+    background-color: #FDF5E6;
+    display: flex;
+    justify-content: center;
+}
+
+#main_sect_original {
+    background: url('../img/bg.jpg');
+    height: 5000px;
+    display: flex;
+    justify-content: center;
+}
+
+#content {
+    width: 80%;
+    height: 100%;
+    margin-top: 120px;
+}
+
+#content * {
+    font-family: 'Lato', sans-serif;
+    text-align: justify;
+}
+
+#content .tale {
+   text-align: justify;
+}
+
+#main_img {
+    width: 450px;
+    height: 225px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+#header {
+    width: 230px;
+    margin: 0 auto;
+}
+
+#story-text {
+    text-indent: 30px;
+}
+/*---------------------------------------------------------------*/
