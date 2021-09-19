@@ -35,7 +35,7 @@
                 <br>
                 <br>
                 <br>
-                <img id="main_img" src="./img/homeImg.jpg" alt="Prostia omeneasca" align="right">
+                <img id="main_img" class="float_right img_mrgn_r0" src="./img/homeImg.jpg" alt="Prostia omeneasca">
 
                 <div id="tale">
                     <span>

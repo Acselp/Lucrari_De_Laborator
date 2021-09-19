@@ -22,6 +22,24 @@
 
 /*------------------------------------------------------*/
 
+table td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+
+table {
+    border: 1px solid black;
+}
+
+table img {
+    width: 250px;
+}
+
+.table {
+    display: flex;
+    justify-content: center;
+}
 
 * {
     margin: 0;
@@ -66,6 +84,15 @@ body {
 .float_right {
     float: right;
 }
+
+.align_center {
+    text-align: center;
+}
+
+.heigth-3600px {
+    height: 3600px;
+}
+
 
 /*--------------------------Nav bar--------------------------------*/
 
