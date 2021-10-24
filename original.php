@@ -1,20 +1,9 @@
 <!Doctype html>
 <html lang="ro">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,
-                user-scalable=no,
-                initial-scale=1.0,
-                maximum-scale=1.0,
-                minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./assets/bootstrap.css">
-
-    <title>Original</title>
-</head>
+<?php
+include("./head.php");
+?>
 
 <body>
 
@@ -42,9 +31,10 @@
                 <div id="tale">
                     <span>
                         <?php
-                        include("tale.php");
-                        ?>
+                                include("tale.php");
+                            ?>
                     </span>
+
                 </div>
 
                 <br>
@@ -52,7 +42,9 @@
                 <br>
 
                 <h4>Sursa: </h4>
-                <a href="https://ro.wikisource.org/wiki/Prostia_omenească">https://ro.wikisource.org/wiki/Prostia_omenească</a>
+                <a href="https://ro.wikisource.org/wiki/Prostia_omenească">
+                    https://ro.wikisource.org/wiki/Prostia_omenească
+                </a>
             </div>
         </div>
     </section>
