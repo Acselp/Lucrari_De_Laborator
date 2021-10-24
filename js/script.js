@@ -1,1 +1,3 @@
-alert("Heeeeeyyyyyyyy its the rd lab!!!")
+$(document).ready(() => {
+    alert("Helloooooooooooooooo thereea!");
+});
