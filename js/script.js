@@ -1,3 +1,8 @@
 $(document).ready(() => {
-    alert("Helloooooooooooooooo thereea!");
+  a = 5;
+  a = function (g) {
+    console.log(g);
+  };
+
+  a(5);
 });
