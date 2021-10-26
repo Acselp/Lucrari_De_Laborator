@@ -40,7 +40,7 @@ include("./head.php");
                 <br>
                 <br>
                 <h4>Sursa: </h4>
-                <a href="https://brainly.ro/tema/2715307">https://brainly.ro/tema/2715307</a>
+                <a href="https://brainly.ro/tema/2715307">https://brainly.ro/tema/2715307 token_get_all</a>
             </div>
         </div>
     </section>

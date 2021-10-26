@@ -9,10 +9,11 @@
         <li><a href="./rezumat.php">Rezumat</a></li>
         <li><a href="./original.php">Originalul</a></li>
         <li><a href="./personaje.php">Personaje</a></li>
+        <li><a href="./contact.php">Cotact Us</a></li>
     </ul>
 
     <div class="log_reg_div">
-        <a href="#">Register</a>
+        <a href="./regForm.php">Register</a>
         <a href="./loginForm.php">Log In</a>
     </div>
 

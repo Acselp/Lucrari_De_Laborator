@@ -42,7 +42,7 @@ include("./head.php");
                 <br>
 
                 <h4>Sursa: </h4>
-                <a href="https://ro.wikisource.org/wiki/Prostia_omenească">
+                <a href="https://ro.wikisource.org/wiki/Prostia_omenească" target="_blank">
                     https://ro.wikisource.org/wiki/Prostia_omenească
                 </a>
             </div>
