@@ -2,22 +2,22 @@
 
 @font-face {
   font-family: "kaushan script";
-  src: url("../fonts/KaushanScriptRegular.eot");
-  src: url("../fonts/KaushanScriptRegular.eot") format("embedded-opentype"),
-    url("../fonts/KaushanScriptRegular.woff2") format("woff2"),
-    url("../fonts/KaushanScriptRegular.woff") format("woff"),
-    url("../fonts/KaushanScriptRegular.ttf") format("truetype"),
-    url("../fonts/KaushanScriptRegular.svg#KaushanScriptRegular") format("svg");
+  src: url("../../fonts/KaushanScriptRegular.eot");
+  src: url("../../fonts/KaushanScriptRegular.eot") format("embedded-opentype"),
+    url("../../fonts/KaushanScriptRegular.woff2") format("woff2"),
+    url("../../fonts/KaushanScriptRegular.woff") format("woff"),
+    url("../../fonts/KaushanScriptRegular.ttf") format("truetype"),
+    url("../../fonts/KaushanScriptRegular.svg#KaushanScriptRegular") format("svg");
 }
 
 @font-face {
-  font-family: "lato";
-  src: url("../fonts/LatoRegular.eot");
-  src: url("../fonts/LatoRegular.eot") format("embedded-opentype"),
-    url("../fonts/LatoRegular.woff2") format("woff2"),
-    url("../fonts/LatoRegular.woff") format("woff"),
-    url("../fonts/LatoRegular.ttf") format("truetype"),
-    url("../fonts/LatoRegular.svg#LatoRegular") format("svg");
+  font-family: "Lato";
+  src: url("../../fonts/LatoRegular.eot");
+  src: url("../../fonts/LatoRegular.eot") format("embedded-opentype"),
+    url("../../fonts/LatoRegular.woff2") format("woff2"),
+    url("../../fonts/LatoRegular.woff") format("woff"),
+    url("../../fonts/LatoRegular.ttf") format("truetype"),
+    url("../../fonts/LatoRegular.svg#LatoRegular") format("svg");
 }
 
 /*------------------------------------------------------*/
@@ -51,7 +51,7 @@ body {
 }
 
 .main_section {
-  background: url("../img/bg.jpg");
+  background: url("../../img/bg.jpg");
   display: flex;
   justify-content: center;
 }
@@ -94,6 +94,10 @@ body {
 }
 
 /*--------------------------Nav bar--------------------------------*/
+
+.active {
+  
+}
 
 #nav_bar {
   width: 100%;
@@ -153,8 +157,8 @@ body {
 }
 
 .log_reg_div > a {
-  color: blanchedalmond;
   text-decoration: none;
+  color: blanchedalmond;
 }
 
 .log_reg_div > a:hover {
@@ -162,7 +166,80 @@ body {
   text-decoration: none;
 }
 
-/*--------------------------Nav bar--------------------------------*/
+.burger_menu {
+  z-index: 3;
+  float: right;
+  height: 200px;
+  display: none;
+  
+}
+
+.burger_menu ul {
+  border: 3px solid #f07427;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 150px;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+}
+
+.burger_menu li {
+  padding: 5px;
+  list-style: none;
+}
+
+.burger_menu a {
+  text-decoration: none;
+  color: #ffebcd;
+  font-family: Lato;
+}
+
+.burger_button {
+  height: 40px;
+  width: 40px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  border-radius: 5px;
+  align-self: center;
+  margin-right: 12px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.burger_button:hover {
+  background-color: #694026;
+}
+
+.burger_button > div {
+  align-self: center;
+}
+
+.burger_button > div:after, 
+.burger_button > div:before {
+ content: "";
+}
+
+.burger_button > div, 
+.burger_button > div:after, 
+.burger_button > div:before {
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #f0ead6;
+  margin: 8px 0;
+}
+
+.burger_button > div:after {
+  top: 0;
+}
+ 
+.burger_button > div:before {
+  bottom: 0;
+}
+
+/*---------------------------------------------------------------------------*/
 
 /*-------------------------Main section <<home page>>------------------------------*/
 
@@ -180,7 +257,7 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-#header_div a {
+#header_div a{
   border: 3px solid #f07427;
   color: white;
   padding: 5px 10px;
@@ -244,6 +321,22 @@ body {
 
 .indent-30px {
   text-indent: 30px;
+}
+
+#toggle-text-btn {
+  color: #f07427;
+  background-color: #fdf5e6;
+  border: 3px solid #f07427;
+  padding: 10px 30px;
+  margin-top: 7px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+ #toggle-tale-text{
+  display: none;
 }
 
 /*---------------------------------------------------------------*/

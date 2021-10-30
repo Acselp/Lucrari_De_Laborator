@@ -31,7 +31,7 @@
         Așa zicând, oftă din greu, ieși din casă, fără să-și ieie ziua bună, și plecă supărat și amărât ca vai de om!
     </p>
 
-    <p>Și mergând el bezmetic, fără să știe unde se duce, după o bucată de vreme, oprindu-se într-un loc, i se întâmplă iar să vadă ceva ce nu mai văzuse: un om ținea puțin un oboroc deșert cu gura spre soare, apoi răpede-l înșfăca și intra cu dânsul într-un bordeiu; pe urmă iar ieșea, îl punea iar cu gura la soare, și tot așa făcea... Drumețul nostru, nedumerit, zise:
+    <p>Și mergând el bezmetic, fără să știe unde se duce, după o bucată de vreme, oprindu-se într-un loc, i se întâmplă iar să vadă ceva ce nu mai văzuse: un om ținea puțin un oboroc deșert cu gura spre soare, apoi răpede-l înșfăca și intra cu dânsul într-un bordeiu; pe urmă iar ieșea, îl punea iar cu gura la soare, și tot așa făcea... Drumețul nostru,<div id="toggle-tale-text"> nedumerit, zise:
         <img src="./img/galeatacusoare.png" alt="Galeata cu soare" class="img_mrgn_l0 float_left">
         <br>&emsp; — Bună ziua, om bun!
 
@@ -108,4 +108,6 @@
         Ș-am încălecat pe-o roată, ș-am spus-o toată.
 
         Ș-am încălecat pe-o căpșună, și v-am spus, oameni buni, o mare minciună!!</p>
+    </div>
+    <button id="toggle-text-btn" onclick="toggleTextBtn('#toggle-text-btn')">Citeste mai mult</button>
 </div>
