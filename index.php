@@ -22,8 +22,6 @@
             <a href="./original.php">Citește povestea</a>
         </div>
     </section>
-
-    <script src="./js/script.js"></script>
 </body>
 
 </html>

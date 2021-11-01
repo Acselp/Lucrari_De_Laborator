@@ -96,7 +96,7 @@ body {
 /*--------------------------Nav bar--------------------------------*/
 
 .active {
-  
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 #nav_bar {
@@ -131,7 +131,7 @@ body {
 }
 
 #menu > li > a {
-  padding: 25px 20px 25px 20px;
+  padding: 26px 20px 26px 20px;
   font-size: 12pt;
   text-decoration: none;
   color: blanchedalmond;
@@ -143,7 +143,7 @@ body {
 }
 
 #menu > li > a:hover {
-  background-color: #af541c;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .log_reg_div {
@@ -165,7 +165,7 @@ body {
   color: #ecbe76;
   text-decoration: none;
 }
-
+      /*----------------Burger menu---------------*/
 .burger_menu {
   z-index: 3;
   float: right;
@@ -175,23 +175,25 @@ body {
 }
 
 .burger_menu ul {
-  border: 3px solid #f07427;
+  border: 4px solid #f07427;
   background-color: rgba(0, 0, 0, 0.7);
-  width: 150px;
+  width: 200px;
   position: absolute;
   top: 70px;
   right: 20px;
 }
 
 .burger_menu li {
-  padding: 5px;
+  padding: 10px 15px 10px 15px;
   list-style: none;
 }
 
-.burger_menu a {
+.burger_menu a, 
+.burger_menu span{
   text-decoration: none;
   color: #ffebcd;
   font-family: Lato;
+  margin-top: 5px;
 }
 
 .burger_button {
@@ -208,7 +210,7 @@ body {
 }
 
 .burger_button:hover {
-  background-color: #694026;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .burger_button > div {
@@ -238,7 +240,37 @@ body {
 .burger_button > div:before {
   bottom: 0;
 }
+      /*-------------Themes--------------*/
 
+#theme-btns {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+#orange-theme-div,
+#purple-theme-div,
+#green-theme-div {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #f0ead6;
+  cursor: pointer;
+}
+
+#orange-theme-div {
+  background-color: #f07427;
+}
+
+#purple-theme-div {
+  background-color: #9946b2;
+}
+
+#green-theme-div {
+ background-color: #6fbe51;
+}
 /*---------------------------------------------------------------------------*/
 
 /*-------------------------Main section <<home page>>------------------------------*/
