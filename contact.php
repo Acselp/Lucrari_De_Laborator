@@ -8,7 +8,7 @@
   <body>
     
     <?php
-    $activePage = "contact";
+      $activePage = "contact";
       include("./nav.php");
     ?>
 
@@ -16,42 +16,38 @@
       <div class="container">
         <div id="content">
           <h1 style="text-align: center">Contacteazăne</h1>
-          <br />
-          <br />
+          <br/>
+          <br/>
           <div class="table">
-            <br />
-            <br />
-            <br />
+            <br/>
+            <br/>
+            <br/>
 
-              <form class="contact_form">
-                <label for="fname">FirstName</label>
+              <form action="./contactAction.php" method="GET" class="contact_form" id="contactForm">
+                <!-- <label for="contactFname">FirstName</label> -->
                 <input
                   type="text"
-                  id="fname"
-                  name="firstname"
+                  name="contactFname"
                   placeholder="Prenumele"
                 />
 
-                <label for="lname">LastName</label>
+                <!-- <label for="contactLname">LastName</label> -->
                 <input
                   type="text"
-                  id="lname"
-                  name="lastname"
+                  name="contactLname"
                   placeholder="Numele"
                 />
 
-                <label for="email">Email</label>
+                <!-- <label for="contactEmail">Email</label> -->
                 <input
                   type="text"
-                  id="email"
-                  name="email"
+                  name="contactEmail"
                   placeholder="Emailul tau"
                 />
 
-                <label for="subject">Subject</label>
+                <!-- <label for="contactSubject">Subject</label> -->
                 <textarea
-                  id="subject"
-                  name="subject"
+                  name="contactSubject"
                   placeholder="Scrie mesajul tau"
                   style="height: 200px"
                 ></textarea>

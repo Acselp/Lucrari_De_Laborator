@@ -387,7 +387,7 @@ body {
 
 .reg_form {
   margin-top: 140px;
-  height: 600px;
+  height: 650px;
 }
 
 .ul_login_form {
@@ -403,7 +403,7 @@ body {
 }
 
 .form_elem > input {
-  margin-bottom: 20px;
+  margin-top: 20px;
   width: 440px;
   height: 60px;
   font-size: 18px;
@@ -416,6 +416,7 @@ body {
 .form_elem > input[type="submit"] {
   background-color: #4caf50;
   border-color: #4caf50;
+  margin-bottom: 20px;
 }
 
 .form_header {
@@ -424,9 +425,14 @@ body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: bold;
   font-size: 36px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
+label.error{
+  color: red;
+  font-weight: bold;
+  font-family: Lato;
+}
 
 /*------------------------------------------------------------------*/
 
@@ -439,6 +445,7 @@ body {
 }
 
 .contact_form input[type="text"],
+input[type="submit"],
 select,
 textarea {
   width: 100%;
@@ -446,15 +453,10 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
+  margin-top: 20px;
   resize: vertical;
 }
 
-.contact_form input[type="submit"]{
-  width: 82px;
-  
-}
 
 .contact_form input[type="submit"] {
   background-color: #04aa6d;
@@ -463,6 +465,7 @@ textarea {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  width: 82px;
 }
 
 .contact_form input[type="submit"]:hover {
@@ -472,6 +475,26 @@ textarea {
 .cont {
   border-radius: 5px;
   padding: 20px;
+}
+
+.serverData {
+  margin-top: 200px;
+}
+
+.serverData div {
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  font-family: Lato;
+  font-size: 20pt;
+  text-align: left;
+}
+
+.serverData img {
+  size: auto;
+  margin-left: 20px;
+  position: relative;
+  top: 15px;
 }
 
 /*--------------------------------------------------------------------*/

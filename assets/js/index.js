@@ -3,6 +3,9 @@ $(window).on("load", () => {
     currTheme = localStorage.getItem("currentTheme");
     changeTheme(currTheme);
 
+    $("#regForm").submit(regFormValidation());
+    $("#loginForm").submit(logFormValidation());
+    $("#contactForm").submit(contactFormValidation());
 })
 
 //Afisarea si ascunderea textului la apasarea butonului
@@ -70,3 +73,67 @@ function changeTheme(theme) {
 
 //Pagina activa navbar -----------------------------------------------------------
 
+function regFormValidation() {
+    let form = $("#regForm");
+    form.validate({
+        wrapper: "div",
+        rules: {
+            unameReg: {
+                required: true,
+                minlength: 3,
+                maxlength: 20
+            },
+            emailReg: {
+                required: true,
+                email: true
+            },
+            pwdReg: {
+                required: true,
+                minlength: 8,
+                maxlength: 20
+            }
+            // rpwdReg: {
+            //     equalTo: "#pwdReg"
+            // }
+        }
+    })
+}
+
+
+//Login form validation------------------------------------------------
+
+function logFormValidation() {
+    let form = $("#loginForm");
+
+    form.validate({
+        wrapper: "div",
+        rules: {
+            unameLog: {required: true},
+            pwdLog: {required: true}
+        }
+    });
+}
+
+//Contact form validation-----------------------------------------------
+
+function contactFormValidation() {
+    let form = $("#contactForm");
+    form.validate({
+        wrapper: "div",
+        rules: {
+            contactFname: {
+                required: true
+            },
+            contactLname: {
+                required: true
+            },
+            contactEmail: {
+                required: true,
+                email: true
+            },
+            contactSubject: {
+                required: true
+            }
+        }
+    });
+}
