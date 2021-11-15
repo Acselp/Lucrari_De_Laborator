@@ -91,10 +91,11 @@ function regFormValidation() {
                 required: true,
                 minlength: 8,
                 maxlength: 20
+            },
+            rpwdReg: {
+                required: true,
+                equalTo: "#pwdId"
             }
-            // rpwdReg: {
-            //     equalTo: "#pwdReg"
-            // }
         }
     })
 }

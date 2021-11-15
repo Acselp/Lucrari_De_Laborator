@@ -16,7 +16,7 @@
                 <li class="form_header">Sign Up</li>
                 <li class="form_elem"><input name="unameReg" type="text" placeholder="Username"></li>
                 <li class="form_elem"><input name="emailReg" type="email" placeholder="Email"></li>
-                <li class="form_elem"><input name="pwdReg" type="password" placeholder="Password"></li>
+                <li class="form_elem"><input name="pwdReg" id="pwdId" type="password" placeholder="Password"></li>
                 <li class="form_elem"><input name="rpwdReg" type="password" placeholder="Repeat password"></li>
                 <li class="form_elem"><input type="submit" value="Submit"></li>
                 <li class="form_links"><a href="#">Create account</a></li>
