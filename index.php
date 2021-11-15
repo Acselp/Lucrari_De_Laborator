@@ -8,6 +8,7 @@
 <body>
 
     <?php
+    $activePage = "acasa";
         include('nav.php');
         ?>
 

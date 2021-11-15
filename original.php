@@ -8,6 +8,7 @@ include("./head.php");
 <body>
 
     <?php
+    $activePage = "original";
     include('nav.php');
     ?>
 

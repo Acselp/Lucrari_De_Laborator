@@ -8,6 +8,7 @@
   <body>
     
     <?php
+    $activePage = "contact";
       include("./nav.php");
     ?>
 
