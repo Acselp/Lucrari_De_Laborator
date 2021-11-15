@@ -11,7 +11,7 @@
         include("./nav.php");
     ?>
     <section class="main_section heigth-100vh">
-        <form method="GET" action="./reg.php" class="login_form reg_form" id="regForm">
+        <form method="GET" action="./registerAction.php" class="login_form reg_form" id="regForm">
             <ul class="ul_login_form">
                 <li class="form_header">Sign Up</li>
                 <li class="form_elem"><input name="unameReg" type="text" placeholder="Username"></li>
