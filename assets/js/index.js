@@ -4,9 +4,35 @@ $(window).on("load", () => {
     changeTheme(currTheme);
 
     $("#regForm").submit(regFormValidation());
-    $("#loginForm").submit(logFormValidation());
+    
     $("#contactForm").submit(contactFormValidation());
 })
+
+
+$(document).ready(function () {
+    $("#submitBtn").click(() => {
+
+        let uname = $("#unameLog").val();
+        let pwd = $("#pwdLog").val();
+        
+        $.post( "../../loginAction.php" );
+
+        //$.get("GET", "../../loginAction.php?unameLog=" + uname + "&pwdLog=" + pwd, true);
+
+        // $.ajax({
+        //     type: "POST",
+        //     url: "../../loginAction.php",
+        //     data: ({"unameLog": uname, "pwdLog": pwd}),
+        //     dataType: "html",
+        //     success: (response) => {
+        //         $("#loginPage").replaceWith(response);
+        //     },
+        //     error: () => {
+        //         alert("Error");
+        //     }
+        // })
+    });
+});
 
 //Afisarea si ascunderea textului la apasarea butonului
 function toggleTextBtn(btn) {
@@ -103,17 +129,32 @@ function regFormValidation() {
 
 //Login form validation------------------------------------------------
 
-function logFormValidation() {
-    let form = $("#loginForm");
+// function logFormValidation() {
+//     let $form = $("#loginForm");
+//     let $uname = $("#unameLog").val();
+//     let $pwd = $("#pwdLog").val();
 
-    form.validate({
-        wrapper: "div",
-        rules: {
-            unameLog: {required: true},
-            pwdLog: {required: true}
-        }
-    });
-}
+//     $form.validate({
+//         wrapper: "div",
+//         rules: {
+//             unameLog: {required: true},
+//             pwdLog: {required: true}
+//         },
+//         submitHandler: () => {
+//             $("nav").replaceWith('');
+//             $.ajax({
+//                 type: "POST",
+//                 url: "../../loginAction.php",
+//                 data: ({username: "User", password: "User"}),
+//                 dataType: "html",
+//                 success: (response) => {
+//                     $("#loginPage").replaceWith(response);
+//                     alert("Success");
+//                 }
+//             })
+//         }
+//     });
+// }
 
 //Contact form validation-----------------------------------------------
 
