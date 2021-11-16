@@ -1,24 +1,9 @@
 
-<!Doctype html>
-<html lang="ro">
-
-    <?php
-        include("./head.php");
-    ?>
-
-<body>
-
-    <?php
-        $activePage = "";
-        include('nav.php');
-    ?>
-
-    <section class="main_section heigth-100vh">
         <div class="container">
             <div class="serverData">
                 <?php
-                    $unameLog = trim($_GET["unameLog"]);
-                    $pwdLog = trim($_GET["pwdLog"]);
+                    $unameLog = trim($_POST["username"]);
+                    $pwdLog = trim($_POST["password"]);
                    
                     $errorList = [];
 
@@ -44,7 +29,3 @@
                 
             </div>
         </div>
-    </section>
-</body>
-
-</html>

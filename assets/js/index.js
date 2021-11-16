@@ -4,7 +4,9 @@ $(window).on("load", () => {
     changeTheme(currTheme);
 
     $("#regForm").submit(regFormValidation());
-    $("#loginForm").submit(logFormValidation());
+    $("#submitBtn").click(() => {
+        logFormValidation();
+    });
     $("#contactForm").submit(contactFormValidation());
 })
 
@@ -101,16 +103,36 @@ function regFormValidation() {
 }
 
 
+function loginRequest() {
+    let uname = $("#unameLog").val();
+    let pwd = $("#pwdLog").val();
+
+    $.ajax({
+        type: "POST",
+        url: "http://localhost/TWEB/loginAction.php",
+        data: {"username": uname, "password": pwd},
+        dataType: "html",
+        success: (response) => {
+            $("#loginPage").html(response);
+        },
+        error: () => {
+            alert("Something went wrong. :(");
+        }
+    })
+}
+
 //Login form validation------------------------------------------------
 
 function logFormValidation() {
-    let form = $("#loginForm");
-
-    form.validate({
+    let $form = $("#loginForm");
+    $form.validate({
         wrapper: "div",
         rules: {
             unameLog: {required: true},
             pwdLog: {required: true}
+        },
+        submitHandler: () => {
+            loginRequest();
         }
     });
 }
