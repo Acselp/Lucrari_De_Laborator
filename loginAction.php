@@ -1,17 +1,25 @@
 
+<!Doctype html>
+<html lang="ro">
+
+    <?php
+        include("./head.php");
+    ?>
+
+<body>
+
+    <?php
+        $activePage = "";
+        include('nav.php');
+    ?>
+
+    <section class="main_section heigth-100vh">
         <div class="container">
             <div class="serverData">
                 <?php
-                    $unameLog = trim($_POST["pwdLog"]);
-                    $pwdLog = trim($_POST["unameLog"]);
-
-                    // $unameLog = trim($_GET["pwdLog"]);
-                    // $pwdLog = trim($_GET["unameLog"]);
-
-                    if(isset($unameLog) && isset($pwdLog)) {
-                        echo "<br><br><br><br><br><br><br><br>Username and password not found. :(";
-                    }
-
+                    $unameLog = trim($_GET["unameLog"]);
+                    $pwdLog = trim($_GET["pwdLog"]);
+                   
                     $errorList = [];
 
                     if($unameLog === "" || $unameLog == null) {
@@ -36,3 +44,7 @@
                 
             </div>
         </div>
+    </section>
+</body>
+
+</html>
