@@ -1,25 +1,10 @@
 
-<!Doctype html>
-<html lang="ro">
-
-    <?php
-        include("./head.php");
-    ?>
-
-<body>
-
-    <?php
-        $activePage = "";
-        include('nav.php');
-    ?>
-
-    <section class="main_section heigth-100vh">
         <div class="container">
             <div class="serverData">
                 <?php
-                    $unameReg = trim($_GET["unameReg"]);
-                    $pwdReg = trim($_GET["pwdReg"]);
-                    $emailReg = trim($_GET["emailReg"]);
+                    $unameReg = trim($_GET["username"]);
+                    $pwdReg = trim($_GET["password"]);
+                    $emailReg = trim($_GET["email"]);
                    
                     $errorList = [];
 
@@ -64,7 +49,3 @@
                 
             </div>
         </div>
-    </section>
-</body>
-
-</html>

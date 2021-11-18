@@ -2,13 +2,21 @@
 $(window).on("load", () => {
     currTheme = localStorage.getItem("currentTheme");
     changeTheme(currTheme);
+})
 
-    $("#regForm").submit(regFormValidation());
+$(document).ready(function () {
+    $("#regSubmitBtn").click(() => {
+        regFormValidation();
+    });
+
     $("#submitBtn").click(() => {
         logFormValidation();
     });
-    $("#contactForm").submit(contactFormValidation());
-})
+
+    $("#contactSubmitBtn").click(() => {
+        contactFormValidation()
+    });
+});
 
 //Afisarea si ascunderea textului la apasarea butonului
 function toggleTextBtn(btn) {
@@ -72,12 +80,32 @@ function changeTheme(theme) {
     });
 }
 
+//Registration request----------------------------------
 
-//Pagina activa navbar -----------------------------------------------------------
+function regRequest() {
+    let uname = $("#unameId").val();
+    let email = $("#emailId").val();
+    let pwd = $("#pwdId").val();
+
+    $.ajax({
+        type: "POST",
+        url: "http://localhost/TWEB/regAction.php",
+        data: ({"username": uname, "email": email, "password": pwd}),
+        dataType: "html",
+        success: (response) => {
+            $("#regPage").html(response);
+        },
+        error: () => {
+            alert("Something went wrong :(");
+        }
+    })
+}
+
+//reg validation -----------------------------------------------------------
 
 function regFormValidation() {
-    let form = $("#regForm");
-    form.validate({
+    let $form = $("#regForm");
+    $form.validate({
         wrapper: "div",
         rules: {
             unameReg: {
@@ -96,8 +124,11 @@ function regFormValidation() {
             },
             rpwdReg: {
                 required: true,
-                equalTo: "#pwdId"
-            }
+                equalTo: "#pwdReg"
+            },
+            submitHandler: () => {
+                regRequest()
+            },
         }
     })
 }
@@ -113,7 +144,7 @@ function loginRequest() {
         data: {"username": uname, "password": pwd},
         dataType: "html",
         success: (response) => {
-            $("#loginPage").html(response);
+            
         },
         error: () => {
             alert("Something went wrong. :(");
@@ -137,6 +168,29 @@ function logFormValidation() {
     });
 }
 
+
+//Contact request --------------------------------------------------
+
+function contactRequest() {
+    let fname = $("#contactFname");
+    let lname = $("#contactLname");
+    let email = $("#contactEmail");
+    let subj = $("#contactSubject");
+
+    $.ajax({
+        type: "POST",
+        url: "http://localhost/TWEB/contactAction.php",
+        data: ({"constactFname": fname, "contactLname": lname, "contactEmail": email, "contactSubject": subj}),
+        dataType: "html",
+        success: (response) => {
+            $("#regPage").html(response);
+        },
+        error: () => {
+            alert("Error :(");
+        }
+    })
+}
+
 //Contact form validation-----------------------------------------------
 
 function contactFormValidation() {
@@ -156,6 +210,9 @@ function contactFormValidation() {
             },
             contactSubject: {
                 required: true
+            },
+            submitHandler: () => {
+                contactRequest();
             }
         }
     });

@@ -1,26 +1,11 @@
 
-<!Doctype html>
-<html lang="ro">
-
-    <?php
-        include("./head.php");
-    ?>
-
-<body>
-
-    <?php
-        $activePage = "";
-        include('nav.php');
-    ?>
-
-    <section class="main_section heigth-100vh">
         <div class="container">
             <div class="serverData">
                 <?php
-                    $fname = trim($_GET["contactFname"]);
-                    $lname = trim($_GET["contactLname"]);
-                    $email = trim($_GET["contactEmail"]);
-                    $subject = trim($_GET["contactSubject"]);
+                    $fname = trim($_POST["contactFname"]);
+                    $lname = trim($_POST["contactLname"]);
+                    $email = trim($_POST["contactEmail"]);
+                    $subject = trim($_POST["contactSubject"]);
                     
                     $errorList = [];
 
@@ -57,7 +42,3 @@
                 
             </div>
         </div>
-    </section>
-</body>
-
-</html>

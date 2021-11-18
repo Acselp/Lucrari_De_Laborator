@@ -461,7 +461,8 @@ textarea {
 }
 
 
-.contact_form input[type="submit"] {
+.contact_form button {
+  margin-top: 20px;
   background-color: #04aa6d;
   color: white;
   padding: 12px 20px;
@@ -469,10 +470,6 @@ textarea {
   border-radius: 4px;
   cursor: pointer;
   width: 82px;
-}
-
-.contact_form input[type="submit"]:hover {
-  background-color: #45a049;
 }
 
 .cont {

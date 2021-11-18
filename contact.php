@@ -12,7 +12,7 @@
       include("./nav.php");
     ?>
 
-    <section class="main_section heigth-100vh">
+    <section class="main_section heigth-100vh" id="regPage">
       <div class="container">
         <div id="content">
           <h1 style="text-align: center">Contacteazăne</h1>
@@ -23,36 +23,12 @@
             <br/>
             <br/>
 
-              <form action="./contactAction.php" method="GET" class="contact_form" id="contactForm">
-                <!-- <label for="contactFname">FirstName</label> -->
-                <input
-                  type="text"
-                  name="contactFname"
-                  placeholder="Prenumele"
-                />
-
-                <!-- <label for="contactLname">LastName</label> -->
-                <input
-                  type="text"
-                  name="contactLname"
-                  placeholder="Numele"
-                />
-
-                <!-- <label for="contactEmail">Email</label> -->
-                <input
-                  type="text"
-                  name="contactEmail"
-                  placeholder="Emailul tau"
-                />
-
-                <!-- <label for="contactSubject">Subject</label> -->
-                <textarea
-                  name="contactSubject"
-                  placeholder="Scrie mesajul tau"
-                  style="height: 200px"
-                ></textarea>
-
-                <input type="submit" value="Submit" />
+              <form class="contact_form" id="contactForm">
+                <input type="text" name="contactFname" placeholder="Prenumele"/>
+                <input type="text" name="contactLname" placeholder="Numele"/>
+                <input type="text" name="contactEmail" placeholder="Emailul tau"/>
+                <textarea name="contactSubject" placeholder="Scrie mesajul tau" style="height: 200px"></textarea>
+                <button type="submit" id="contactSubmitBtn">Submit</button>
               </form>
             
           </div>
