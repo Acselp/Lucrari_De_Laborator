@@ -5,16 +5,16 @@ $(window).on("load", () => {
 })
 
 $(document).ready(function () {
-    $("#regSubmitBtn").click(() => {
+    $("#regBtn").click(() => {
         regFormValidation();
     });
 
-    $("#submitBtn").click(() => {
+    $("#loginBtn").click(() => {
         logFormValidation();
     });
 
-    $("#contactSubmitBtn").click(() => {
-        contactFormValidation()
+    $("#contactBtn").click(() => {
+        contactFormValidation();
     });
 });
 
@@ -83,14 +83,14 @@ function changeTheme(theme) {
 //Registration request----------------------------------
 
 function regRequest() {
-    let uname = $("#unameId").val();
-    let email = $("#emailId").val();
-    let pwd = $("#pwdId").val();
+    let uname = $("input[name='unameReg']").val();
+    let email = $("input[name='emailReg']").val();
+    let pwd = $("input[name='pwdReg']").val();
 
     $.ajax({
         type: "POST",
         url: "http://localhost/TWEB/regAction.php",
-        data: ({"username": uname, "email": email, "password": pwd}),
+        data: {username: uname, email: email, password: pwd},
         dataType: "html",
         success: (response) => {
             $("#regPage").html(response);
@@ -104,8 +104,8 @@ function regRequest() {
 //reg validation -----------------------------------------------------------
 
 function regFormValidation() {
-    let $form = $("#regForm");
-    $form.validate({
+    let form = $("form[name='regForm']");
+    form.validate({
         wrapper: "div",
         rules: {
             unameReg: {
@@ -124,27 +124,27 @@ function regFormValidation() {
             },
             rpwdReg: {
                 required: true,
-                equalTo: "#pwdReg"
-            },
-            submitHandler: () => {
-                regRequest()
-            },
+                equalTo: "input[name='pwdReg']"
+            }
+        },
+        submitHandler: () => {
+            regRequest();
         }
     })
 }
 
 
 function loginRequest() {
-    let uname = $("#unameLog").val();
-    let pwd = $("#pwdLog").val();
+    let uname = $("input[name='unameLog']").val();
+    let pwd = $("input[name='pwdLog']").val();
 
     $.ajax({
         type: "POST",
         url: "http://localhost/TWEB/loginAction.php",
-        data: {"username": uname, "password": pwd},
+        data: {username: uname, password: pwd},
         dataType: "html",
         success: (response) => {
-            
+            $("#loginPage").html(response);
         },
         error: () => {
             alert("Something went wrong. :(");
@@ -155,8 +155,8 @@ function loginRequest() {
 //Login form validation------------------------------------------------
 
 function logFormValidation() {
-    let $form = $("#loginForm");
-    $form.validate({
+    let form = $("form[name='loginForm'");
+    form.validate({
         wrapper: "div",
         rules: {
             unameLog: {required: true},
@@ -172,31 +172,35 @@ function logFormValidation() {
 //Contact request --------------------------------------------------
 
 function contactRequest() {
-    let fname = $("#contactFname");
-    let lname = $("#contactLname");
-    let email = $("#contactEmail");
-    let subj = $("#contactSubject");
+    const fname = $('input[name="contactFname"]').val();
+    const lname = $('input[name="contactLname"]').val();
+    const email = $('input[name="contactEmail"]').val();
+    const subj = $('textarea[name="contactSubject"]').val();
+
+
 
     $.ajax({
         type: "POST",
         url: "http://localhost/TWEB/contactAction.php",
-        data: ({"constactFname": fname, "contactLname": lname, "contactEmail": email, "contactSubject": subj}),
+        data: {contactFname: fname, contactLname: lname, contactEmail: email, "contactSubj": subj},
         dataType: "html",
         success: (response) => {
-            $("#regPage").html(response);
+            $("#contactPage").html(response);
         },
         error: () => {
             alert("Error :(");
         }
-    })
+    });
+    return false;
 }
 
 //Contact form validation-----------------------------------------------
 
 function contactFormValidation() {
-    let form = $("#contactForm");
-    form.validate({
+    let $form2 = $("#contactForm");
+    $form2.validate({
         wrapper: "div",
+        debug: false,
         rules: {
             contactFname: {
                 required: true
@@ -210,10 +214,10 @@ function contactFormValidation() {
             },
             contactSubject: {
                 required: true
-            },
-            submitHandler: () => {
-                contactRequest();
             }
+        },
+        submitHandler: () => {
+            contactRequest();
         }
     });
 }

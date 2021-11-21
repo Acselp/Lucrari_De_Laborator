@@ -12,7 +12,7 @@
       include("./nav.php");
     ?>
 
-    <section class="main_section heigth-100vh" id="regPage">
+    <section class="main_section heigth-100vh" id="contactPage">
       <div class="container">
         <div id="content">
           <h1 style="text-align: center">Contacteazăne</h1>
@@ -28,7 +28,7 @@
                 <input type="text" name="contactLname" placeholder="Numele"/>
                 <input type="text" name="contactEmail" placeholder="Emailul tau"/>
                 <textarea name="contactSubject" placeholder="Scrie mesajul tau" style="height: 200px"></textarea>
-                <button type="submit" id="contactSubmitBtn">Submit</button>
+                <button type="submit" id="contactBtn">Submit</button>
               </form>
             
           </div>

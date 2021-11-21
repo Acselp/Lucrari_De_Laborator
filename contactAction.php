@@ -5,7 +5,7 @@
                     $fname = trim($_POST["contactFname"]);
                     $lname = trim($_POST["contactLname"]);
                     $email = trim($_POST["contactEmail"]);
-                    $subject = trim($_POST["contactSubject"]);
+                    $subject = trim($_POST["contactSubj"]);
                     
                     $errorList = [];
 
@@ -30,7 +30,7 @@
 
                     if(!$errorList) {
                         echo "<div>Your message has been successfully sent. :) <img src='./img/ok.png' alt='Successfuly sent'></div>";
-                        echo "Your data:<br>First name: $fname<br> Last name: $lname<br> Email: $email<br> Subject: $subject<br>";
+                        echo "<br><br>Your data:<br>First name: $fname<br> Last name: $lname<br> Email: $email<br> Subject: $subject<br>";
                     }
                     else {
                         echo("<div>The server hasn't been comitted your data,<img src='./img/notok.png' alt='Server don't accept wrong data.'><br>because of the following errors:<br></div>");

@@ -1,5 +1,5 @@
 
-        <!-- <div class="container">
+        < <div class="container">
             <div class="serverData">
                 <?php
                     $unameLog = trim($_POST["username"]);
@@ -16,13 +16,8 @@
                     }
 
                     if(!$errorList) {
-                        $array = array(
-                            "username" => $unameLog,
-                            "password" => $pwdLog
-                        ); 
-                        echo json_encode($array);
-                    //     echo "<div>Your data has been successfully sent.<img src='./img/ok.png' alt='Successfuly sent'><br>Now you can pretend you are logged in :)</div><br>";
-                    //     echo "Your data:<br>Username: $unameLog<br> Password: $pwdLog<br>";
+                         echo "<div>Your data has been successfully sent.<img src='./img/ok.png' alt='Successfuly sent'><br>Now you can pretend you are logged in :)</div><br>";
+                         echo "Your data:<br>Username: $unameLog<br> Password: $pwdLog<br>";
                     }
                     else {
                         echo("<div>The server hasn't been comitted your data,<img src='./img/notok.png' alt='Server don't accept wrong data.'><br>because of the following errors:<br><br></div>");
@@ -33,6 +28,6 @@
                 ?>
                 
             </div>
-        </div> -->
+        </div> 
 
     

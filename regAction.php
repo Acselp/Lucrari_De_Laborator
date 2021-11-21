@@ -2,9 +2,9 @@
         <div class="container">
             <div class="serverData">
                 <?php
-                    $unameReg = trim($_GET["username"]);
-                    $pwdReg = trim($_GET["password"]);
-                    $emailReg = trim($_GET["email"]);
+                    $unameReg = trim($_POST["username"]);
+                    $pwdReg = trim($_POST["password"]);
+                    $emailReg = trim($_POST["email"]);
                    
                     $errorList = [];
 
