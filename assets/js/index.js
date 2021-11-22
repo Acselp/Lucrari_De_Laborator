@@ -1,10 +1,8 @@
 
-$(window).on("load", () => {
+$(document).ready(function () {
     currTheme = localStorage.getItem("currentTheme");
     changeTheme(currTheme);
-})
 
-$(document).ready(function () {
     $("#regBtn").click(() => {
         regFormValidation();
     });
@@ -17,6 +15,7 @@ $(document).ready(function () {
         contactFormValidation();
     });
 });
+
 
 //Afisarea si ascunderea textului la apasarea butonului
 function toggleTextBtn(btn) {
