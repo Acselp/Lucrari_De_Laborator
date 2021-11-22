@@ -23,7 +23,7 @@
             <br/>
             <br/>
 
-              <form action="./contactAction.php" method="GET" class="contact_form" id="contactForm">
+              <form action="./contactAction.php" method="POST" class="contact_form" name="contactForm">
                 <!-- <label for="contactFname">FirstName</label> -->
                 <input
                   type="text"

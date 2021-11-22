@@ -17,10 +17,10 @@
         <div class="container">
             <div class="serverData">
                 <?php
-                    $fname = trim($_GET["contactFname"]);
-                    $lname = trim($_GET["contactLname"]);
-                    $email = trim($_GET["contactEmail"]);
-                    $subject = trim($_GET["contactSubject"]);
+                    $fname = trim($_POST["contactFname"]);
+                    $lname = trim($_POST["contactLname"]);
+                    $email = trim($_POST["contactEmail"]);
+                    $subject = trim($_POST["contactSubject"]);
                     
                     $errorList = [];
 

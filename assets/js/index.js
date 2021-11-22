@@ -1,5 +1,5 @@
 
-$(window).on("load", () => {
+$(document).ready(() => {
     currTheme = localStorage.getItem("currentTheme");
     changeTheme(currTheme);
 
@@ -118,7 +118,7 @@ function logFormValidation() {
 //Contact form validation-----------------------------------------------
 
 function contactFormValidation() {
-    let form = $("#contactForm");
+    let form = $("form[name='contactForm']");
     form.validate({
         wrapper: "div",
         rules: {
