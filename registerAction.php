@@ -17,9 +17,9 @@
         <div class="container">
             <div class="serverData">
                 <?php
-                    $unameReg = trim($_GET["unameReg"]);
-                    $pwdReg = trim($_GET["pwdReg"]);
-                    $emailReg = trim($_GET["emailReg"]);
+                    $unameReg = trim($_POST["unameReg"]);
+                    $pwdReg = trim($_POST["pwdReg"]);
+                    $emailReg = trim($_POST["emailReg"]);
                    
                     $errorList = [];
 

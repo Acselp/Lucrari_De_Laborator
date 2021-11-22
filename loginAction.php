@@ -17,8 +17,8 @@
         <div class="container">
             <div class="serverData">
                 <?php
-                    $unameLog = trim($_GET["unameLog"]);
-                    $pwdLog = trim($_GET["pwdLog"]);
+                    $unameLog = trim($_POST["unameLog"]);
+                    $pwdLog = trim($_POST["pwdLog"]);
                    
                     $errorList = [];
 
