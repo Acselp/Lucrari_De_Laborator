@@ -132,7 +132,6 @@ function regFormValidation() {
     })
 }
 
-
 function loginRequest() {
     let uname = $("input[name='unameLog']").val();
     let pwd = $("input[name='pwdLog']").val();
@@ -142,8 +141,10 @@ function loginRequest() {
         url: "http://localhost/TWEB/loginAction.php",
         data: {username: uname, password: pwd},
         dataType: "html",
-        success: (response) => {
-            $("#loginPage").html(response);
+        success: (res) => {
+            response = JSON.parse(res);
+            htmlMessage = "<div>Your data has been successfully sent.<img src='./img/ok.png' alt='Successfuly sent'><br>Now you can pretend you are logged in :)</div><br>Your data:<br>Username: " + response["unsername"] + "<br> Password: " + response.password + "<br>";
+            $("#loginPage").html(htmlMessage);
         },
         error: () => {
             alert("Something went wrong. :(");
