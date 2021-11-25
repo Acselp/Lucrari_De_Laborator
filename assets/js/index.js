@@ -51,7 +51,6 @@ function changeTheme(theme) {
     localStorage.setItem("currentTheme", theme);
 
     let baseColor;
-    let navBarHoverColor;
 
     switch(theme){
         case 'orange': {
@@ -90,9 +89,22 @@ function regRequest() {
         type: "POST",
         url: "http://localhost/TWEB/regAction.php",
         data: {username: uname, email: email, password: pwd},
-        dataType: "html",
+        dataType: "json",
         success: (response) => {
-            $("#regPage").html(response);
+            //response = JSON.parse(res);
+            if(!response.errors) {
+                let htmlMessage = "<div class='container'><div class='serverData'><div>Your data has been successfully sent.<img src='./img/ok.png' alt='Successfuly sent' width='52px' height='52px'><br>Now you can pretend you are signed in :)</div><br>Your data:<br>Username: " + response["unsername"] + "<br> Email: " + response["email"] + "<br> Password: " + response["password"] + "<br> </div></div>";
+                $("#regPage").html(htmlMessage);
+            }
+            else {
+                let htmlMessage = "<div class='container'><div class='serverData'><div>The server hasn't been comitted your data,<img src='./img/notok.png' alt='Server don't accept wrong data.'><br>because of the following errors:<br><br></div>";
+                $("#regPage").html(htmlMessage);
+
+                response.errorList.forEach(() => {
+                    let htmlError = "<span style='color: red; font-family: Lato; font-weight: bold; font-size='14pt''>$err</span></div></div>";
+                    $("#regPage").html(htmlError);
+                })
+            }
         },
         error: () => {
             alert("Something went wrong :(");
@@ -140,11 +152,22 @@ function loginRequest() {
         type: "POST",
         url: "http://localhost/TWEB/loginAction.php",
         data: {username: uname, password: pwd},
-        dataType: "html",
-        success: (res) => {
-            response = JSON.parse(res);
-            htmlMessage = "<div>Your data has been successfully sent.<img src='./img/ok.png' alt='Successfuly sent'><br>Now you can pretend you are logged in :)</div><br>Your data:<br>Username: " + response["unsername"] + "<br> Password: " + response.password + "<br>";
-            $("#loginPage").html(htmlMessage);
+        dataType: "json",
+        success: (response) => {
+            //response = JSON.parse(res);
+            if(!response.errors) {
+                let htmlMessage = "<div class='container'><div class='serverData'><div>Your data has been successfully sent.<img src='./img/ok.png' alt='Successfuly sent' width='52px' height='52px'><br>Now you can pretend you are logged in :)</div><br>Your data:<br>Username: " + response["unsername"] + "<br> Password: " + response["password"] + "<br> </div></div>";
+                $("#loginPage").html(htmlMessage);
+            }
+            else {
+                let htmlMessage = "<div class='container'><div class='serverData'><div>The server hasn't been comitted your data,<img src='./img/notok.png' alt='Server don't accept wrong data.'><br>because of the following errors:<br><br></div>";
+                $("#loginPage").html(htmlMessage);
+
+                response.errorList.forEach((el) => {
+                    let htmlError = "<span style='color: red; font-family: Lato; font-weight: bold; font-size='14pt''>" + el + "</span></div></div>";
+                    $("#loginPage").html(htmlError);
+                })
+            }
         },
         error: () => {
             alert("Something went wrong. :(");
@@ -182,10 +205,22 @@ function contactRequest() {
     $.ajax({
         type: "POST",
         url: "http://localhost/TWEB/contactAction.php",
-        data: {contactFname: fname, contactLname: lname, contactEmail: email, "contactSubj": subj},
-        dataType: "html",
+        data: {contactFname: fname, contactLname: lname, contactEmail: email, contactSubj: subj},
+        dataType: "json",
         success: (response) => {
-            $("#contactPage").html(response);
+            if(!response.errors) {
+                let htmlMessage = "<div class='container'><div class='serverData'><div>Your data has been successfully sent.<img src='./img/ok.png' alt='Successfuly sent' width='52px' height='52px'><br>Now you can pretend you are signed in :)</div><br>Your data:<br>Fname: " + response.fname + "<br> Lname: " + response.lname + "<br> Email: " + response.email + "<br>Subject: " + response.subj + "<br> </div></div>";
+                $("#contactPage").html(htmlMessage);
+            }
+            else {
+                let htmlMessage = "<div class='container'><div class='serverData'><div>The server hasn't been comitted your data,<img src='./img/notok.png' alt='Server don't accept wrong data.'><br>because of the following errors:<br><br></div>";
+                $("#contactPage").html(htmlMessage);
+
+                response.errorList.forEach(() => {
+                    let htmlError = "<span style='color: red; font-family: Lato; font-weight: bold; font-size='14pt''>$err</span></div></div>";
+                    $("#contactPage").html(htmlError);
+                })
+            }
         },
         error: () => {
             alert("Error :(");

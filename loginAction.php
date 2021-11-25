@@ -15,15 +15,16 @@
 
     if(!$errorList) {
         echo json_encode(array(
+            "errors" => false,
             "username" => $unameLog,
             "password" => $pwdLog
         ));
     }
     else {
-        echo("<div>The server hasn't been comitted your data,<img src='./img/notok.png' alt='Server don't accept wrong data.'><br>because of the following errors:<br><br></div>");
-        foreach($errorList as $err) {
-            echo "<span style='color: red; font-family: Lato; font-weight: bold; font-size='14pt''>$err</span>";
-        }
+        echo json_encode(array(
+            "errors" => true,
+            "errorList" => json_encode($err)
+        ));
     }
 ?>
           
