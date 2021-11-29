@@ -21,6 +21,22 @@
                 <li class="form_links"><a href="#">Forgot password?</a></li>
             </ul>
         </form>
+
+        <div class="container hidden">
+            <div class="serverData">
+                <div>Your data has been successfully sent.
+                    <img src="./img/ok.png" alt="Successfuly sent" width="52px" height="52px">
+                    <br>
+                    Now you can pretend you are signed in :)
+                </div>
+                <br>Your data:
+                <br>Fname: <span id="fnameSignUp"></span>
+                <br> Lname: <span id="lnameSignUp"></span>
+                <br> Email: <span id="emailSignUp"></span>
+                <br>Subject: <span id="passwordSignUp"></span>
+                <br> 
+            </div>
+        </div>"
     </section>
 
 </body>

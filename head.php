@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="./assets/js/jquery.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="./assets/js/jquery.validate.js"></script>
     <script src="./assets/js/index.js"></script>
     <title>Povești pentru copii</title>
 </head>

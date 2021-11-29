@@ -1,5 +1,8 @@
 
 <?php
+
+    include_once("DbHandler.php");
+
     $unameReg = trim($_POST["username"]);
     $pwdReg = trim($_POST["password"]);
     $emailReg = trim($_POST["email"]);
@@ -34,11 +37,16 @@
     }
 
     if(!$errorList) {
+        $db = new DbHandler("localhost", "lab6web", "root", "");
+
+        $sql = "INSERT INTO users (`username`, `email`, `password`)
+                VALUES ('$unameReg', '$emailReg', '$pwdReg')";
+
+        $res = $db->connect()->query($sql);
+
         echo json_encode(array(
             "errors" => false,
-            "username" => $unameReg,
-            "password" => $pwdReg,
-            "email" => $emailReg
+            "result" => $res
         ));
     }
     else {

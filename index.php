@@ -1,3 +1,14 @@
+<?php
+    $logged;
+    session_start();
+    if(isset($_SESSION['user'])) {
+        $logged = true;
+    }
+    else {
+        $logged = false;
+    }
+?>
+
 <!Doctype html>
 <html lang="ro">
 
@@ -8,9 +19,9 @@
 <body>
 
     <?php
-    $activePage = "acasa";
+        $activePage = "acasa";
         include('nav.php');
-        ?>
+    ?>
 
     <section class="main_section heigth-100vh">
         <div id="header_div">

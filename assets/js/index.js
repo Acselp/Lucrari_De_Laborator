@@ -91,17 +91,16 @@ function regRequest() {
         data: {username: uname, email: email, password: pwd},
         dataType: "json",
         success: (response) => {
-            //response = JSON.parse(res);
             if(!response.errors) {
-                let htmlMessage = "<div class='container'><div class='serverData'><div>Your data has been successfully sent.<img src='./img/ok.png' alt='Successfuly sent' width='52px' height='52px'><br>Now you can pretend you are signed in :)</div><br>Your data:<br>Username: " + response["unsername"] + "<br> Email: " + response["email"] + "<br> Password: " + response["password"] + "<br> </div></div>";
+                let htmlMessage = "<div class='container'><div class='serverData'><div>Your data has been successfully sent.<img src='./img/ok.png' alt='Successfuly sent' width='52px' height='52px'><br>Now you can pretend you are signed in :)</div></div>";
                 $("#regPage").html(htmlMessage);
             }
             else {
                 let htmlMessage = "<div class='container'><div class='serverData'><div>The server hasn't been comitted your data,<img src='./img/notok.png' alt='Server don't accept wrong data.'><br>because of the following errors:<br><br></div>";
                 $("#regPage").html(htmlMessage);
 
-                response.errorList.forEach(() => {
-                    let htmlError = "<span style='color: red; font-family: Lato; font-weight: bold; font-size='14pt''>$err</span></div></div>";
+                response.errorList.forEach((error) => {
+                    let htmlError = "<span style='color: red; font-family: Lato; font-weight: bold; font-size='14pt''>" + error + "</span></div></div>";
                     $("#regPage").html(htmlError);
                 })
             }
@@ -154,19 +153,11 @@ function loginRequest() {
         data: {username: uname, password: pwd},
         dataType: "json",
         success: (response) => {
-            //response = JSON.parse(res);
-            if(!response.errors) {
-                let htmlMessage = "<div class='container'><div class='serverData'><div>Your data has been successfully sent.<img src='./img/ok.png' alt='Successfuly sent' width='52px' height='52px'><br>Now you can pretend you are logged in :)</div><br>Your data:<br>Username: " + response["unsername"] + "<br> Password: " + response["password"] + "<br> </div></div>";
-                $("#loginPage").html(htmlMessage);
+            if(response.status === true) {
+                $("#loginPage").html("<div class='container'><div class='serverData'>" + response.message + "</div></div>");
             }
             else {
-                let htmlMessage = "<div class='container'><div class='serverData'><div>The server hasn't been comitted your data,<img src='./img/notok.png' alt='Server don't accept wrong data.'><br>because of the following errors:<br><br></div>";
-                $("#loginPage").html(htmlMessage);
-
-                response.errorList.forEach((el) => {
-                    let htmlError = "<span style='color: red; font-family: Lato; font-weight: bold; font-size='14pt''>" + el + "</span></div></div>";
-                    $("#loginPage").html(htmlError);
-                })
+                $("#loginPage").html("<div class='container'><div class='serverData'>" + response.message + "</div></div>");
             }
         },
         error: () => {
@@ -209,8 +200,13 @@ function contactRequest() {
         dataType: "json",
         success: (response) => {
             if(!response.errors) {
-                let htmlMessage = "<div class='container'><div class='serverData'><div>Your data has been successfully sent.<img src='./img/ok.png' alt='Successfuly sent' width='52px' height='52px'><br>Now you can pretend you are signed in :)</div><br>Your data:<br>Fname: " + response.fname + "<br> Lname: " + response.lname + "<br> Email: " + response.email + "<br>Subject: " + response.subj + "<br> </div></div>";
-                $("#contactPage").html(htmlMessage);
+                $("form.login_form").addClass("hidden");
+                $("div.container").removeClass("hidden");
+                $("#fnameSignUp").text(response.fname);
+                $("#fnameSignUp").text(response.lname);
+                $("#fnameSignUp").text(response.email);
+                $("#fnameSignUp").text(response.password);
+
             }
             else {
                 let htmlMessage = "<div class='container'><div class='serverData'><div>The server hasn't been comitted your data,<img src='./img/notok.png' alt='Server don't accept wrong data.'><br>because of the following errors:<br><br></div>";

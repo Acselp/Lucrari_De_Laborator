@@ -17,7 +17,6 @@ class DbHandler {
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error . "<br>");
         }
-        echo("Connected successfully<br>");
         return $conn;
     }
 }
