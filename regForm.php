@@ -1,7 +1,10 @@
+
 <html lang="en">
 
 <?php
     include("./head.php");
+    include("./DbHandler.php");
+    include("./functions.php");
 ?>
 
 <body>
@@ -23,6 +26,28 @@
                 <li class="form_links"><a href="#">Forgot password?</a></li>
             </ul>
         </form>
+        
+        <div class="container regSuccess hidden">
+            <div class="serverData">
+                <div>Your data has been successfully sent.
+                    <img src="./img/ok.png" alt="Successfuly sent" width="52px" height="52px">
+                    <br>
+                    Now you can pretend you are signed in :)
+                    text
+                </div>
+            </div>
+        </div>
+
+        <div class="container regFail hidden">
+            <div class="serverData">
+                <div>Your data hasn't been sent.
+                    <img src="./img/notok.png" alt="Problem occured" width="52px" height="52px">
+                    <br>
+                    Something went wrong :(<br>
+                    Try againt to fill the form.
+                </div>
+            </div>
+        </div>
     </section>
 
     <script src="assets/js/index.js"></script>

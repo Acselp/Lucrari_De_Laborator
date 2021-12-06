@@ -89,24 +89,19 @@ function regRequest() {
         type: "POST",
         url: "http://localhost/TWEB/regAction.php",
         data: {username: uname, email: email, password: pwd},
-        dataType: "json",
+        dataType: "JSON",
         success: (response) => {
-            if(!response.errors) {
-                let htmlMessage = "<div class='container'><div class='serverData'><div>Your data has been successfully sent.<img src='./img/ok.png' alt='Successfuly sent' width='52px' height='52px'><br>Now you can pretend you are signed in :)</div></div>";
+            if(response.status == true) {
+                let htmlMessage = "<div class='container'><div class='serverData'><div>Your data has been successfully sent<img src='./img/ok.png' alt='Successfuly sent' width='52px' height='52px'><br>Now you can pretend you are signed in :)</div></div>";
                 $("#regPage").html(htmlMessage);
             }
             else {
-                let htmlMessage = "<div class='container'><div class='serverData'><div>The server hasn't been comitted your data,<img src='./img/notok.png' alt='Server don't accept wrong data.'><br>because of the following errors:<br><br></div>";
+                let htmlMessage = "<div class='container'><div class='serverData'><div>" + response.message + "<img src='./img/notok.png' alt='Server don't accept wrong data.'><br>Please try again</div>";
                 $("#regPage").html(htmlMessage);
-
-                response.errorList.forEach((error) => {
-                    let htmlError = "<span style='color: red; font-family: Lato; font-weight: bold; font-size='14pt''>" + error + "</span></div></div>";
-                    $("#regPage").html(htmlError);
-                })
             }
         },
-        error: () => {
-            alert("Something went wrong :(");
+        error: (xhr, status, err) => {
+            alert("Something went wrong :(\n" + " " + err + " " + status);
         }
     })
 }
@@ -153,8 +148,9 @@ function loginRequest() {
         data: {username: uname, password: pwd},
         dataType: "json",
         success: (response) => {
-            if(response.status === true) {
+            if(response.status == true) {
                 $("#loginPage").html("<div class='container'><div class='serverData'>" + response.message + "</div></div>");
+                $(location). attr('href', 'http://localhost/TWEB/loginForm.php');
             }
             else {
                 $("#loginPage").html("<div class='container'><div class='serverData'>" + response.message + "</div></div>");
@@ -199,23 +195,16 @@ function contactRequest() {
         data: {contactFname: fname, contactLname: lname, contactEmail: email, contactSubj: subj},
         dataType: "json",
         success: (response) => {
+            $("form.login_form").addClass("hidden");
             if(!response.errors) {
-                $("form.login_form").addClass("hidden");
-                $("div.container").removeClass("hidden");
+                $("div.regSuccess").removeClass("hidden");
                 $("#fnameSignUp").text(response.fname);
-                $("#fnameSignUp").text(response.lname);
-                $("#fnameSignUp").text(response.email);
-                $("#fnameSignUp").text(response.password);
-
+                $("#lnameSignUp").text(response.lname);
+                $("#emailSignUp").text(response.email);
+                $("#passwordSignUp").text(response.password);
             }
             else {
-                let htmlMessage = "<div class='container'><div class='serverData'><div>The server hasn't been comitted your data,<img src='./img/notok.png' alt='Server don't accept wrong data.'><br>because of the following errors:<br><br></div>";
-                $("#contactPage").html(htmlMessage);
-
-                response.errorList.forEach(() => {
-                    let htmlError = "<span style='color: red; font-family: Lato; font-weight: bold; font-size='14pt''>$err</span></div></div>";
-                    $("#contactPage").html(htmlError);
-                })
+                $("div.regFail").removeClass("hidden");
             }
         },
         error: () => {

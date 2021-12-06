@@ -1,8 +1,9 @@
+
 <nav id="nav_bar">
     <a href="./index.php" id="logo">FreeTales</a>
 
 
-
+   
     <ul id="menu">
         <li><a href="./index.php" id="a1" class=<?php if($activePage == "acasa") {echo "active";}?>>Acasa</a></li>
         <li><a href="./rezumat.php" id="a2" class=<?php if($activePage == "rezumat") {echo "active";}?>>Rezumat</a></li>
@@ -10,12 +11,7 @@
         <li><a href="./personaje.php" id="a4" class=<?php if($activePage == "personaje") {echo "active";}?>>Personaje</a></li>
         <li><a href="./contact.php" id="a5" class=<?php if($activePage == "contact") {echo "active";}?>>Cotact Us</a></li>
     </ul>
-    <!--
-    <div class="log_reg_div">
-        <a href="./regForm.php">Register</a>
-        <a href="./loginForm.php">Log In</a>
-    </div>
-    -->
+   
     <div class="burger_button" onclick="toggleBurgerMenu('.burger_button')">
         <div></div>
     </div>
