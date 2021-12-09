@@ -73,6 +73,7 @@ function userExists($db, $uname) {
 //Verifies if a user exists in DB uith a specific uname and pwd
 function userCheck($db, $uname, $pwd) {
     $sql = "SELECT * FROM users WHERE username = '$uname' AND password = '$pwd'";
+    
     $res = $db->connect()->query($sql);
     $numRows = $res->num_rows;
 

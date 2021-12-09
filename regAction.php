@@ -11,7 +11,7 @@
     if(usernameValide($unameReg) && passwordValide($pwdReg) && emailValide($emailReg)) {
         if(!userExists($db, $unameReg)) {
 
-            addUser($db, $unameReg, $emailReg, $pwdReg);
+            addUser($db, $unameReg, $emailReg, md5($pwdReg));
             echo json_encode(array(
                 "status" => true,
                 "message" => ""

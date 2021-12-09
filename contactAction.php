@@ -1,5 +1,8 @@
 
 <?php
+    include("./DbHandler.php");
+    include("./functions.php");
+
     $fname = trim($_POST["contactFname"]);
     $lname = trim($_POST["contactLname"]);
     $email = trim($_POST["contactEmail"]);
@@ -27,13 +30,20 @@
     }
 
     if(!$errorList) {
-        echo json_encode(array(
-            "errors" => false,
-            "fname" => $fname,
-            "lname" => $lname,
-            "email" => $email,
-            "subj" => $subject
-        ));
+        $q = "INSERT INTO messages (fname, lname, email, message) VALUES ('$fname', '$lname', '$email', '$subject');";
+        $res = $db->connect()->query($q);
+
+        if($res === true) {
+            echo json_encode(array(
+                "errors" => false
+            ));
+        }
+        else {
+            echo json_encode(array(
+                "errors" => true
+            ));
+        }
+       
     }
     else {
         echo json_encode(array(

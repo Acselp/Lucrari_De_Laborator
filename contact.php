@@ -28,7 +28,7 @@
                 <input type="text" name="contactLname" placeholder="Numele"/>
                 <input type="text" name="contactEmail" placeholder="Emailul tau"/>
                 <textarea name="contactSubject" placeholder="Scrie mesajul tau" style="height: 200px"></textarea>
-                <button type="submit" id="contactBtn">Submit</button>
+                <button id="contactBtn">Submit</button>
               </form>
             
           </div>

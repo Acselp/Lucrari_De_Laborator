@@ -11,7 +11,7 @@ $(document).ready(function () {
         logFormValidation();
     });
 
-    $("#contactBtn").click(() => {
+    $("#contactForm").click(() => {
         contactFormValidation();
     });
 });
@@ -195,23 +195,14 @@ function contactRequest() {
         data: {contactFname: fname, contactLname: lname, contactEmail: email, contactSubj: subj},
         dataType: "json",
         success: (response) => {
-            $("form.login_form").addClass("hidden");
             if(!response.errors) {
-                $("div.regSuccess").removeClass("hidden");
-                $("#fnameSignUp").text(response.fname);
-                $("#lnameSignUp").text(response.lname);
-                $("#emailSignUp").text(response.email);
-                $("#passwordSignUp").text(response.password);
-            }
-            else {
-                $("div.regFail").removeClass("hidden");
+                $("#contactPage").html("<div class='container'><div class='serverData'><div>Your data has been successfully sent<img src='./img/ok.png' alt='Successfuly sent' width='52px' height='52px'><br></div></div>");
             }
         },
         error: () => {
             alert("Error :(");
         }
     });
-    return false;
 }
 
 //Contact form validation-----------------------------------------------
@@ -220,7 +211,6 @@ function contactFormValidation() {
     let $form2 = $("#contactForm");
     $form2.validate({
         wrapper: "div",
-        debug: false,
         rules: {
             contactFname: {
                 required: true

@@ -5,7 +5,7 @@
     include_once("./functions.php");
 
     $unameLog = preventInjection($_POST["username"]);
-    $pwdLog = preventInjection($_POST["password"]);
+    $pwdLog = md5(preventInjection($_POST["password"]));
 
     $errorList = [];
 
@@ -21,7 +21,6 @@
         $_SESSION["username"] = $unameLog;
         $_SESSION["password"] = $pwdLog;
         
-        updateLastLogged($db, $unameLog);
         echo json_encode(array(
             "status" => true,
             "message" => ""
